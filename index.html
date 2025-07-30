@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London to Litres™ - Premium Water Delivery in Greater Noida West</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ffa726);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transform: translateY(0);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .service-areas {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .area-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .area-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .area-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:nth-child(2) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .feature-card:nth-child(3) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .feature-card:nth-child(4) {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .feature-card:nth-child(5) {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #333;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .pricing {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+            color: white;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-10px);
+        }
+        
+        .popular {
+            transform: scale(1.1);
+            border: 2px solid #ffa726;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ffa726;
+        }
+        
+        .contact {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+            .pricing-cards { grid-template-columns: 1fr; }
+            .popular { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>London to Litres™</h1>
+            <p>Premium Water Delivery Service for Businesses in Greater Noida West</p>
+            <p style="font-size: 1.1rem; margin-bottom: 40px;">✓ Business-only delivery ✓ Quality assured ✓ Bulk discounts available</p>
+            <a href="#contact" class="cta-button">Order Now - ₹45/jar</a>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+        <div class="container">
+            <h2 class="section-title">We Serve These Areas</h2>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon">🏘️</div>
+                    <h3>Jalpura</h3>
+                    <p>Same-day delivery available</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🏢</div>
+                    <h3>Aimnabad</h3>
+                    <p>Business delivery specialist</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🌆</div>
+                    <h3>Bisrakh</h3>
+                    <p>Office & retail delivery</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🎯</div>
+                    <h3>Ace City</h3>
+                    <p>Commercial area specialist</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🏙️</div>
+                    <h3>Gaur City 1</h3>
+                    <p>Trusted by 100+ businesses</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🌟</div>
+                    <h3>Gaur City 2</h3>
+                    <p>Premium business service</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🏗️</div>
+                    <h3>Grandthum</h3>
+                    <p>New commercial hub</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🌅</div>
+                    <h3>Golden I</h3>
+                    <p>Business district coverage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose London to Litres™ for Your Business?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Business Hours Delivery</h3>
+                    <p>Scheduled deliveries during office hours. Never run out during important meetings!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>WhatsApp Updates</h3>
+                    <p>Real-time delivery updates to your business phone. Stay informed, stay prepared.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Lab-tested water with batch tracking. Perfect for office and retail needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Business Payment Terms</h3>
+                    <p>Monthly billing, GST invoices, UPI payments. Hassle-free accounting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Bulk Discounts</h3>
+                    <p>Special rates for large orders. The more you order, the more you save!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Business-Friendly Pricing Plans</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Small Business</h3>
+                    <div class="price">₹45</div>
+                    <p>• Perfect for small offices</p>
+                    <p>• Same day delivery</p>
+                    <p>• ₹100 jar deposit</p>
+                    <p>• GST invoicing available</p>
+                    <a href="#contact" class="cta-button" style="margin-top: 20px;">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Standard Business</h3>
+                    <div class="price">₹40</div>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">per jar</p>
+                    <p>• 10+ jars per month</p>
+                    <p>• Priority business delivery</p>
+                    <p>• No jar deposit required</p>
+                    <p>• Monthly GST billing</p>
+                    <p style="background: #ffa726; padding: 5px 10px; border-radius: 20px; margin-top: 15px;">MOST POPULAR</p>
+                    <a href="#contact" class="cta-button" style="margin-top: 20px;">Subscribe</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise & Bulk</h3>
+                    <div class="price">₹₹₹</div>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Special rates</p>
+                    <p>• 25+ jars per month</p>
+                    <p>• Custom delivery schedule</p>
+                    <p>• Maximum bulk discounts</p>
+                    <p>• Dedicated account manager</p>
+                    <a href="#contact" class="cta-button" style="margin-top: 20px;">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get Started Today</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 style="color: #667eea; margin-bottom: 30px; font-size: 1.8rem;">Contact Information</h3>
+                    <div style="margin-bottom: 25px;">
+                        <strong>📞 Phone:</strong><br>
+                        +91 9953556399
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <strong>💬 WhatsApp:</strong><br>
+                        +91 9953556399
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <strong>🌐 Website:</strong><br>
+                        www.sunmyvend.in
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <strong>⏰ Service Hours:</strong><br>
+                        Monday - Sunday: 7:00 AM - 9:00 PM
+                    </div>
+                    <div style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin-top: 30px;">
+                        <strong>🎯 Business Special:</strong><br>
+                        First business delivery FREE + 10% discount on bulk orders!
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: #667eea; margin-bottom: 30px; font-size: 1.8rem;">Business Order Form</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label>Business/Contact Name *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Business Phone *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Business Type</label>
+                            <select name="business_type">
+                                <option value="">Select business type</option>
+                                <option value="office">Office/Corporate</option>
+                                <option value="retail">Retail Store</option>
+                                <option value="restaurant">Restaurant/Cafe</option>
+                                <option value="salon">Salon/Spa</option>
+                                <option value="clinic">Clinic/Hospital</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Area *</label>
+                            <select name="area" required>
+                                <option value="">Select your area</option>
+                                <option value="jalpura">Jalpura</option>
+                                <option value="aimnabad">Aimnabad</option>
+                                <option value="bisrakh">Bisrakh</option>
+                                <option value="ace-city">Ace City</option>
+                                <option value="gaur-city-1">Gaur City 1</option>
+                                <option value="gaur-city-2">Gaur City 2</option>
+                                <option value="grandthum">Grandthum</option>
+                                <option value="golden-i">Golden I</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Business Address *</label>
+                            <textarea name="address" rows="3" required placeholder="Shop/Office number, Building name, Landmark"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Monthly Water Requirement</label>
+                            <select name="jars">
+                                <option value="5-10">5-10 Jars</option>
+                                <option value="10-20" selected>10-20 Jars</option>
+                                <option value="20-30">20-30 Jars</option>
+                                <option value="30+">30+ Jars (Bulk pricing)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Delivery Time</label>
+                            <select name="time">
+                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon" selected>Afternoon (12 PM - 4 PM)</option>
+                                <option value="evening">Evening (4 PM - 7 PM)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%; margin-top: 20px;">
+                            Submit Business Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919953556399" class="whatsapp-float" target="_blank">
+        <span style="font-size: 1.5rem;">💬</span>
+        <span>Order via WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 London to Litres™ | A Veltorix Company. Premium Water Delivery Service for Greater Noida West.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Serving Jalpura • Aimnabad • Bisrakh • Ace City • Gaur City 1 & 2</p>
+            <p style="margin-top: 5px; font-size: 0.8rem; opacity: 0.6;">Reg. No: Veltorix | Licensed Water Supplier</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create WhatsApp message
+            const message = `New Business Water Order:
+Business: ${data.name}
+Phone: ${data.phone}
+Business Type: ${data.business_type || 'Not specified'}
+Area: ${data.area}
+Address: ${data.address}
+Monthly Requirement: ${data.jars}
+Preferred Time: ${data.time}
+Website: www.sunmyvend.in`;
+            
+            // Open WhatsApp with pre-filled message
+            const whatsappUrl = `https://wa.me/919953556399?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Show success message
+            alert('Thank you for your business inquiry! We\'ll contact you within 2 hours with a customized quote.');
+            e.target.reset();
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.area-card, .feature-card, .pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
