@@ -463,11 +463,14 @@
                     </div>
                     <div style="margin-bottom: 25px;">
                         <strong>🌐 Website:</strong><br>
-                        www.sunmyvend.in
+                        www.sunmyvend.in<br>
+                        london2litres.github.io/london2litres
                     </div>
                     <div style="margin-bottom: 25px;">
                         <strong>⏰ Service Hours:</strong><br>
-                        Monday - Sunday: 7:00 AM - 9:00 PM
+                        Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 9:00 AM - 8:00 PM<br>
+                        Sunday: Closed
                     </div>
                     <div style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin-top: 30px;">
                         <strong>🎯 Business Special:</strong><br>
@@ -517,12 +520,27 @@
                             <textarea name="address" rows="3" required placeholder="Shop/Office number, Building name, Landmark"></textarea>
                         </div>
                         <div class="form-group">
+                            <label>Water Product Type *</label>
+                            <select name="product_type" required>
+                                <option value="">Select product type</option>
+                                <option value="jar-20l">Water Jar (20L)</option>
+                                <option value="bisleri-2l">Bisleri 2L Bottle</option>
+                                <option value="bisleri-1l">Bisleri 1L Bottle</option>
+                                <option value="bisleri-500ml">Bisleri 500ml Bottle</option>
+                                <option value="bisleri-250ml">Bisleri 250ml Bottle</option>
+                                <option value="aqua-boat-2l">Aqua Boat 2L Bottle</option>
+                                <option value="aqua-boat-1l">Aqua Boat 1L Bottle</option>
+                                <option value="aqua-boat-500ml">Aqua Boat 500ml Bottle</option>
+                                <option value="aqua-boat-250ml">Aqua Boat 250ml Bottle</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Monthly Water Requirement</label>
                             <select name="jars">
-                                <option value="5-10">5-10 Jars</option>
-                                <option value="10-20" selected>10-20 Jars</option>
-                                <option value="20-30">20-30 Jars</option>
-                                <option value="30+">30+ Jars (Bulk pricing)</option>
+                                <option value="small">Small (5-15 units)</option>
+                                <option value="medium" selected>Medium (15-50 units)</option>
+                                <option value="large">Large (50-100 units)</option>
+                                <option value="bulk">Bulk (100+ units)</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -581,11 +599,12 @@
 Business: ${data.name}
 Phone: ${data.phone}
 Business Type: ${data.business_type || 'Not specified'}
+Product Type: ${data.product_type}
 Area: ${data.area}
 Address: ${data.address}
 Monthly Requirement: ${data.jars}
 Preferred Time: ${data.time}
-Website: www.sunmyvend.in`;
+Website: london2litres.github.io/london2litres`;
             
             // Open WhatsApp with pre-filled message
             const whatsappUrl = `https://wa.me/919953556399?text=${encodeURIComponent(message)}`;
